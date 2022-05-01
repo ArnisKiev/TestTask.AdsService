@@ -19,8 +19,10 @@ namespace AdsService.Tools.Extansions
                       
                 case TypeSortAds.SortByPrice:
                     list = list.OrderBy(x => x.Price).ToList();
-                    break;               
+                    break;
 
+                default:
+                    return list;
             }
 
             if (direct == SortDirect.Desc)
